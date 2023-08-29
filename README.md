@@ -7,7 +7,7 @@ This paper mainly focuses on creating visual descriptions, i.e., semantic attrib
 
 **The Framework for the Zero-SAT**
 
-![](figs/Zero-SAT5.jpg)
+![](figs/block_diagram.png)
 
 **Dependencies to run the Zero-SAT**
 
