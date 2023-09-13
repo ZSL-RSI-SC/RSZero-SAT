@@ -36,7 +36,7 @@ class CustomedDataset(Dataset):
         idx= results['/'] - 1
         #print(idx)
         if self.dataset == 'UCM':
-            split_idx = idx
+            split_idx = idx    # Set the index value  if you encounter a file not found error, e.g. split_idx=4
         elif self.dataset == 'AID':
             split_idx = idx
         elif self.dataset == 'NWPU':
