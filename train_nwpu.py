@@ -1,14 +1,14 @@
 import torch
 import torch.optim as optim
 import torch.nn as nn
-from model import ZSViDAT
+from model import ZeroSAT
 from dataset import NWPUDataLoader
 from helper_func import eval_zs_gzsl
 import numpy as np
 import wandb
 
 # init wandb from config file
-wandb.init(project='ZSViDAT', config='wandb_config/nwpu_gzsl.yaml', mode="disabled")
+wandb.init(project='ZeroSAT', config='wandb_config/nwpu_gzsl.yaml', mode="disabled")
 config = wandb.config
 print('Config file from wandb:', config)
 
@@ -21,8 +21,8 @@ torch.manual_seed(seed)
 torch.cuda.manual_seed_all(seed)
 np.random.seed(seed)
 
-# ZS-ViDAT model
-model = ZSViDAT(config, dataloader.att, dataloader.w2v_att,
+# Zero-SAT model
+model = ZeroSAT(config, dataloader.att, dataloader.w2v_att,
                   dataloader.seenclasses, dataloader.unseenclasses).to(config.device)
 optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay=0.0001)
 
