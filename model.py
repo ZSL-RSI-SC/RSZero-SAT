@@ -4,10 +4,10 @@ import torch.nn.functional as F
 import numpy as np
 
 
-class ZSViDAT(nn.Module):
+class ZeroSAT(nn.Module):
     def __init__(self, config, att, init_w2v_att, seenclass, unseenclass,
                  is_bias=True, bias=1, is_conservative=True):
-        super(ZSViDAT, self).__init__()
+        super(ZeroSAT, self).__init__()
         self.config = config
         self.dim_f = config.dim_f
         self.dim_v = config.dim_v
