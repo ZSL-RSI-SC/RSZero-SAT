@@ -1,2 +1,2 @@
-Data and code for "ZS-ViDAT"
+Data and code for "Zero-SAT"
 Instructions to obtain res101.mat and att_splits.mat files are there in Zero-SAT/data/xlsa17/code/...
